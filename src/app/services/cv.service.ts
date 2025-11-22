@@ -9,12 +9,6 @@ export class CvService {
   private http = inject(HttpClient);
   private cvName = 'CV_BETTAVER';
 
-  private readonly cvHtml$ = this.http.get(`/assets/cv/${this.cvName}.html`, {
-    responseType: 'text',
-  });
-  // Signal réactif du HTML du CV
-  public cvHtml = toSignal(this.cvHtml$, { initialValue: '' });
-
   public downloadPdf() {
     const link = document.createElement('a');
     link.href = `/assets/cv/${this.cvName}.pdf`;

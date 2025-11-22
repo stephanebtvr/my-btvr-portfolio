@@ -20,15 +20,12 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({
         scrollPositionRestoration: 'top', // Remonte en haut à chaque navigation
-        anchorScrolling: 'enabled', // Active le scroll vers #experience
+        anchorScrolling: 'enabled',
+        // Active le scroll vers #experience
         // Note: scrollOffset is not part of InMemoryScrollingOptions; handle header offset via CSS
         // (e.g. use `scroll-margin-top: 80px` on target elements) or a custom scroll handler.
       })
     ),
-    // provideAppInitializer(
-    //   // Fournit la fonction d'initialisation (injecte le service via factory)
-    //   () => inject(IconService).registerIcons()
-    // ),
 
     // INITIALIZER SÉCURISÉ
     provideAppInitializer(() => {

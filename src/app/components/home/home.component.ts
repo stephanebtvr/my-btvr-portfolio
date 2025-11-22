@@ -29,7 +29,7 @@ import { ProjectsComponent } from '../projects/projects.component';
       <div class="max-w-7xl mx-auto w-full">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <!-- === TEXTE === -->
-          <div class="animate-fadeInUp">
+          <div class="animate-slideIn">
             <p class="text-bordeaux dark:text-rougebrique font-semibold mb-2">Bonjour, je suis</p>
             <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
               Stéphane<br />
@@ -122,16 +122,68 @@ import { ProjectsComponent } from '../projects/projects.component';
           </div>
         </div>
       </div>
+      <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a
+          href="#competences"
+          class="text-rougebrique dark:text-rougebrique hover:text-bordeaux transition-colors"
+        >
+          <i class="fa-solid fa-angles-down text-4xl"></i>
+        </a>
+      </div> -->
+      <div class="absolute inset-x-0 bottom-8 flex justify-center pointer-events-none">
+        <button
+          (click)="scrollToSkills()"
+          class="pointer-events-auto animate-bounce 
+           bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm
+           rounded-full p-4 shadow-2xl border border-gray-200 dark:border-gray-700
+           hover:scale-110 transition-all duration-300"
+          aria-label="Voir mes compétences"
+        >
+          <i class="fa-solid fa-angles-down text-xl text-rougebrique"></i>
+        </button>
+      </div>
     </section>
-    <app-skills></app-skills>
+
+    <app-skills id="competences"></app-skills>
     <app-experience></app-experience>
     <app-projects></app-projects>
     <app-contact></app-contact>
   `,
-  styles: [],
+  styles: [
+    `
+      .animate-slideIn {
+        animation: slideIn 0.8s ease-out forwards;
+      }
+
+      .animate-slideIn.play {
+        animation: slideIn 0.8s ease-out forwards;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    `,
+  ],
 })
 export class HomeComponent {
   portfolioService = inject(PortfolioService);
+
+  scrollToSkills() {
+    const skillsSection = document.getElementById('competences');
+    if (skillsSection) {
+      skillsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
 
   public socialLinks = this.portfolioService.getSocialLinks();
 }

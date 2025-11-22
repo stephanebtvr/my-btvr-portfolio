@@ -27,7 +27,7 @@ import { saveAs } from 'file-saver';
 })
 export class DownloadCvComponent {
   private cvService = inject(CvService);
-  cvHtml = this.cvService.cvHtml;
+
   public isLoading = signal(false);
 
   public async downloadPdf() {
