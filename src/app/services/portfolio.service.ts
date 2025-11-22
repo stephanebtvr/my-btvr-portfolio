@@ -250,7 +250,7 @@ export class PortfolioService {
     return {
       email: 'bettaver.stephane@gmail.com',
       phone: '+33651358480',
-      location: 'Sud-Est de la France',
+      location: 'Mobile en France',
       linkedin: 'https://linkedin.com/in/stephane-btvr',
     };
   }
