@@ -1,0 +1,106 @@
+/* === FONT === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 transition-colors duration-300;
+}
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-bordeaux to-rougebrique bg-clip-text text-transparent;
+}
+html.dark .gradient-text {
+  @apply from-rougebrique to-bordeaux;
+}
+
+/* === SCROLLBAR (WebKit only) === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-roseclair;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-bordeaux rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-rougebrique;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-bordeaux;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-rougebrique rounded;
+}
+
+/* === SMOOTH SCROLL === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === CUSTOM UTILITIES (via @layer) === */
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-bordeaux to-rougebrique bg-clip-text text-transparent;
+  }
+
+  html.dark .gradient-text {
+    @apply from-rougebrique to-bordeaux;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-bordeaux to-rougebrique;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .card-hover:hover {
+    @apply -translate-y-1 shadow-xl;
+  }
+
+  .nav-link {
+    @apply relative font-medium text-gray-700 transition-colors duration-300;
+  }
+
+  .dark .nav-link {
+    @apply text-gray-300;
+  }
+  .nav-link:hover {
+    @apply text-rougebrique;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-bordeaux to-rougebrique transition-all duration-300;
+  }
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .timeline-line {
+    @apply absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-bordeaux to-rougebrique;
+  }
+
+  .timeline-dot {
+    @apply absolute -left-1.5 top-6 w-3.5 h-3.5 rounded-full bg-white border-4 border-bordeaux z-10;
+  }
+
+  .dark .timeline-dot {
+    @apply bg-gray-900 border-rougebrique;
+  }
+}
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
