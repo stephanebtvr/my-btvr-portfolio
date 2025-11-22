@@ -49,15 +49,20 @@ import { ProjectsComponent } from '../projects/projects.component';
               <a
                 href="#contact"
                 class="gradient-bg text-white px-8 py-3 rounded-lg font-semibold 
-                   hover:shadow-xl hover:scale-105 transition-all duration-300"
+       flex items-center justify-center
+       hover:shadow-xl hover:scale-105 transition-all duration-300
+       min-h-[56px]"
               >
                 Me Contacter
               </a>
+
               <a
                 href="#experience"
                 class="bg-white dark:bg-gray-800 text-bordeaux dark:text-rougebrique 
-                   px-8 py-3 rounded-lg font-semibold border-2 border-bordeaux dark:border-rougebrique 
-                   hover:bg-purple-50 dark:hover:bg-gray-700 transition-all duration-300"
+       px-8 py-3 rounded-lg font-semibold border-2 border-bordeaux dark:border-rougebrique 
+       flex items-center justify-center
+       hover:bg-purple-50 dark:hover:bg-gray-700 transition-all duration-300
+       min-h-[56px]"
               >
                 Voir mon CV
               </a>
