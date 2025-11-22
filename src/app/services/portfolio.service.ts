@@ -236,7 +236,7 @@ export class PortfolioService {
         tags: ['Angular', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
         status: 'en cours',
         links: {
-          github: '',
+          github: 'https://github.com/stephanebtvr/my-btvr-portfolio/',
           live: undefined,
         },
         isExpanded: false,
