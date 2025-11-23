@@ -21,13 +21,13 @@ import { ProjectsComponent } from '../projects/projects.component';
   template: `
     <section
       id="accueil"
-      class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center 
+      class=" relative  pt-24 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center 
          bg-gradient-to-br from-purple-50 to-blue-50 
          dark:bg-gradient-to-br dark:from-cyan-950  dark:to-cyan-950 
          transition-all duration-500"
     >
-      <div class="max-w-7xl mx-auto w-full">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="max-w-7xl mx-auto w-full flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
           <!-- === TEXTE === -->
           <div class="animate-slideIn">
             <p class="text-bordeaux dark:text-rougebrique font-semibold mb-2">Bonjour, je suis</p>
@@ -122,15 +122,8 @@ import { ProjectsComponent } from '../projects/projects.component';
           </div>
         </div>
       </div>
-      <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a
-          href="#competences"
-          class="text-rougebrique dark:text-rougebrique hover:text-bordeaux transition-colors"
-        >
-          <i class="fa-solid fa-angles-down text-4xl"></i>
-        </a>
-      </div> -->
-      <div class="absolute inset-x-0 bottom-8 flex justify-center pointer-events-none">
+
+      <div class="absolute inset-x-0 bottom-8 flex justify-center pointer-events-none z-10">
         <button
           (click)="scrollToSkills()"
           class="pointer-events-auto animate-bounce 

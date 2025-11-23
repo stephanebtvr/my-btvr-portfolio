@@ -39,7 +39,6 @@ import { Experience } from '../../models/portfolio.models';
               <div
                 class="absolute left-6 md:left-9 top-8 w-5 h-5 rounded-full bg-white dark:bg-gray-900 border-4 border-bordeaux dark:border-rougebrique z-10 transition-all duration-300 group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-bordeaux/50 dark:group-hover:shadow-rougebrique/50"
               >
-                <!-- Inner glow effect -->
                 <div
                   class="absolute inset-0 rounded-full bg-bordeaux dark:bg-rougebrique opacity-0 group-hover:opacity-50 blur-sm transition-opacity duration-300"
                 ></div>
@@ -49,21 +48,19 @@ import { Experience } from '../../models/portfolio.models';
               <div
                 class="experience-card relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-2xl border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600"
               >
-                <!-- Gradient overlay subtil -->
                 <div
                   class="absolute inset-0 rounded-2xl bg-gradient-to-br from-bordeaux/5 to-rougebrique/5 dark:from-rougebrique/5 dark:to-bordeaux/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 ></div>
 
                 <!-- Header -->
-                <div class="relative z-10 flex flex-wrap items-start justify-between mb-4 gap-4">
-                  <div class="flex-1 min-w-0">
-                    <h3
-                      class="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300"
-                    >
+                <div class="relative z-10 mb-6">
+                  <!-- Titre + Entreprise (toujours collés) -->
+                  <div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white leading-tight">
                       {{ exp.title }}
                     </h3>
                     <p
-                      class="text-bordeaux dark:text-rougebrique font-semibold text-lg flex items-center gap-2"
+                      class="text-bordeaux dark:text-rougebrique font-semibold text-lg flex items-center gap-2 mt-2"
                     >
                       <svg
                         class="w-5 h-5 flex-shrink-0"
@@ -82,15 +79,31 @@ import { Experience } from '../../models/portfolio.models';
                     </p>
                   </div>
 
-                  <!-- Period Badge -->
-                  <div class="flex flex-col items-end gap-2">
-                    <span
-                      class="bg-gradient-to-r from-bordeaux/10 to-rougebrique/10 dark:from-rougebrique/20 dark:to-bordeaux/20 text-bordeaux dark:text-rougebrique px-4 py-2 rounded-xl text-sm font-semibold border border-bordeaux/20 dark:border-rougebrique/30 whitespace-nowrap"
-                    >
-                      {{ exp.period }}
-                    </span>
-                    <span class="text-gray-600 dark:text-gray-400 text-sm flex items-center gap-1">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <!-- Période + Lieu – responsive parfait -->
+                  <div
+                    class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 mt-4"
+                  >
+                    <!-- Badge période -->
+                    <div>
+                      <span
+                        class="inline-block px-4 py-2 rounded-xl text-sm font-bold
+                   bg-gradient-to-r from-bordeaux/10 to-rougebrique/10
+                   dark:from-rougebrique/20 dark:to-bordeaux/20
+                   text-bordeaux dark:text-rougebrique
+                   border border-bordeaux/30 dark:border-rougebrique/40 whitespace-nowrap"
+                      >
+                        {{ exp.period }}
+                      </span>
+                    </div>
+
+                    <!-- Lieu -->
+                    <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+                      <svg
+                        class="w-4 h-4 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -104,8 +117,8 @@ import { Experience } from '../../models/portfolio.models';
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                         />
                       </svg>
-                      {{ exp.location }}
-                    </span>
+                      <span class="truncate max-w-[200px]">{{ exp.location }}</span>
+                    </div>
                   </div>
                 </div>
 
@@ -245,7 +258,7 @@ import { Experience } from '../../models/portfolio.models';
         opacity: 1;
       }
 
-      /* Smooth transitions pour le contenu expandable */
+      /* Smooth transition pour le contenu expandable */
       ul li {
         animation: fadeInUp 0.3s ease-out backwards;
       }
