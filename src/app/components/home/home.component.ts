@@ -5,6 +5,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { ContactComponent } from '../contact/contact.component';
 import { ProjectsComponent } from '../projects/projects.component';
+import { ScrollSpyService } from '../../services/scroll-spy.service';
 
 @Component({
   selector: 'app-home',
@@ -165,15 +166,10 @@ import { ProjectsComponent } from '../projects/projects.component';
 })
 export class HomeComponent {
   portfolioService = inject(PortfolioService);
+  scrollSpyService = inject(ScrollSpyService);
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
+    this.scrollSpyService.activeSection.set(sectionId);
   }
 
   public socialLinks = this.portfolioService.getSocialLinks();
