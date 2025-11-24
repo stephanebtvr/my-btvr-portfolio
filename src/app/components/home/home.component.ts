@@ -1,5 +1,3 @@
-// src/app/components/hero/hero.component.ts
-
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioService } from '../../services/portfolio.service';
@@ -125,7 +123,7 @@ import { ProjectsComponent } from '../projects/projects.component';
 
       <div class="absolute inset-x-0 bottom-8 flex justify-center pointer-events-none z-10">
         <button
-          (click)="scrollToSkills()"
+          (click)="scrollToSection('competences')"
           class="pointer-events-auto animate-bounce 
            bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm
            rounded-full p-4 shadow-2xl border border-gray-200 dark:border-gray-700
@@ -138,9 +136,9 @@ import { ProjectsComponent } from '../projects/projects.component';
     </section>
 
     <app-skills id="competences"></app-skills>
-    <app-experience></app-experience>
-    <app-projects></app-projects>
-    <app-contact></app-contact>
+    <app-experience id="experience"></app-experience>
+    <app-projects id="projects"></app-projects>
+    <app-contact id="contact"></app-contact>
   `,
   styles: [
     `
@@ -168,10 +166,10 @@ import { ProjectsComponent } from '../projects/projects.component';
 export class HomeComponent {
   portfolioService = inject(PortfolioService);
 
-  scrollToSkills() {
-    const skillsSection = document.getElementById('competences');
-    if (skillsSection) {
-      skillsSection.scrollIntoView({
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
