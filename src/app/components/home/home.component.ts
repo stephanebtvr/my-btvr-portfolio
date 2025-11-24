@@ -166,10 +166,15 @@ import { ScrollSpyService } from '../../services/scroll-spy.service';
 })
 export class HomeComponent {
   portfolioService = inject(PortfolioService);
-  scrollSpyService = inject(ScrollSpyService);
 
   scrollToSection(sectionId: string) {
-    this.scrollSpyService.activeSection.set(sectionId);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   }
 
   public socialLinks = this.portfolioService.getSocialLinks();
