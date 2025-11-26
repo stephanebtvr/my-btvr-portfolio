@@ -53,14 +53,17 @@ import { Experience } from '../../models/portfolio.models';
                 ></div>
 
                 <!-- Header -->
-                <div class="relative z-10 mb-6">
-                  <!-- Titre + Entreprise (toujours collés) -->
-                  <div>
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white leading-tight">
-                      {{ exp.title }}
-                    </h3>
+                <!-- Header parfait : Entreprise + Lieu sur la même ligne | Dates + Voir plus en dessous -->
+                <div class="relative z-10">
+                  <!-- Titre -->
+                  <h3 class="text-2xl font-bold text-gray-900 dark:text-white leading-tight">
+                    {{ exp.title }}
+                  </h3>
+
+                  <!-- Ligne Entreprise + Lieu -->
+                  <div class="flex flex-wrap items-center justify-between gap-4 mt-2">
                     <p
-                      class="text-bordeaux dark:text-rougebrique font-semibold text-lg flex items-center gap-2 mt-2"
+                      class="text-bordeaux dark:text-rougebrique font-semibold text-lg flex items-center gap-2"
                     >
                       <svg
                         class="w-5 h-5 flex-shrink-0"
@@ -77,27 +80,11 @@ import { Experience } from '../../models/portfolio.models';
                       </svg>
                       {{ exp.company }}
                     </p>
-                  </div>
 
-                  <!-- Période + Lieu – responsive parfait -->
-                  <div
-                    class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 mt-4"
-                  >
-                    <!-- Badge période -->
-                    <div>
-                      <span
-                        class="inline-block px-4 py-2 rounded-xl text-sm font-bold
-                   bg-gradient-to-r from-bordeaux/10 to-rougebrique/10
-                   dark:from-rougebrique/20 dark:to-bordeaux/20
-                   text-bordeaux dark:text-rougebrique
-                   border border-bordeaux/30 dark:border-rougebrique/40 whitespace-nowrap"
-                      >
-                        {{ exp.period }}
-                      </span>
-                    </div>
-
-                    <!-- Lieu -->
-                    <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+                    <!-- Lieu à droite, sur la même ligne que l'entreprise -->
+                    <div
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm font-medium"
+                    >
                       <svg
                         class="w-4 h-4 flex-shrink-0"
                         fill="none"
@@ -117,71 +104,81 @@ import { Experience } from '../../models/portfolio.models';
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                         />
                       </svg>
-                      <span class="truncate max-w-[200px]">{{ exp.location }}</span>
+                      <span>{{ exp.location }}</span>
                     </div>
                   </div>
-                </div>
 
-                <!-- Description Expandable -->
-                <div class="relative z-10">
-                  <div
-                    #descContainer
-                    class="overflow-hidden transition-all duration-500 ease-in-out"
-                    [style.max-height.px]="exp.isExpanded ? descContainer.scrollHeight : 0"
-                  >
-                    <ul class="space-y-3 text-gray-700 dark:text-gray-300 mt-4">
-                      @for(item of exp.description; track item) {
-                      <li class="flex items-start gap-3 group/item">
-                        <div class="flex-shrink-0 mt-1">
-                          <div
-                            class="w-6 h-6 rounded-full bg-gradient-to-br from-bordeaux to-rougebrique dark:from-rougebrique dark:to-bordeaux flex items-center justify-center transition-transform duration-300 group-hover/item:scale-110"
-                          >
-                            <svg
-                              class="w-3.5 h-3.5 text-white"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <span class="flex-1 leading-relaxed">{{ item }}</span>
-                      </li>
-                      }
-                    </ul>
-                  </div>
+                  <!-- Ligne Dates + Voir plus -->
+                  <div class="mt-5 space-y-3">
+                    <!-- Badge période -->
+                    <div>
+                      <span
+                        class="inline-block px-4 py-2 rounded-xl text-sm font-bold
+                     bg-gradient-to-r from-bordeaux/10 to-rougebrique/10
+                     dark:from-rougebrique/20 dark:to-bordeaux/20
+                     text-bordeaux dark:text-rougebrique
+                     border border-bordeaux/30 dark:border-rougebrique/40"
+                      >
+                        {{ exp.period }}
+                      </span>
+                    </div>
 
-                  <!-- Toggle Button -->
-                  <button
-                    (click)="toggleExperience(exp)"
-                    class="mt-4 inline-flex items-center gap-2 text-bordeaux dark:text-rougebrique font-semibold text-sm hover:gap-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-bordeaux/20 dark:focus:ring-rougebrique/20 rounded-lg px-2 py-1 -ml-2"
-                    [attr.aria-expanded]="exp.isExpanded"
-                    [attr.aria-label]="
-                      exp.isExpanded ? 'Masquer les détails' : 'Afficher les détails'
-                    "
-                  >
-                    <span>{{ exp.isExpanded ? 'Voir moins' : 'Voir plus' }}</span>
-                    <svg
-                      class="w-5 h-5 transition-transform duration-300"
-                      [class.rotate-180]="exp.isExpanded"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                    <!-- Description expandable -->
+                    <div
+                      #descContainer
+                      class="overflow-hidden transition-all duration-500 ease-in-out mt-4"
+                      [style.max-height.px]="exp.isExpanded ? descContainer.scrollHeight : 0"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
+                      <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                        @for(item of exp.description; track item) {
+                        <li class="flex items-start gap-3 group/item">
+                          <div class="flex-shrink-0 mt-1">
+                            <div
+                              class="w-6 h-6 rounded-full bg-gradient-to-br from-bordeaux to-rougebrique dark:from-rougebrique dark:to-bordeaux flex items-center justify-center transition-transform duration-300 group-hover/item:scale-110"
+                            >
+                              <svg
+                                class="w-3.5 h-3.5 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <span class="flex-1 leading-relaxed">{{ item }}</span>
+                        </li>
+                        }
+                      </ul>
+                    </div>
+                    <!-- Bouton Voir plus – aligné parfaitement sous le badge -->
+                    <button
+                      (click)="toggleExperience(exp)"
+                      class="inline-flex items-center gap-2.5 pl-4 -ml-4 text-bordeaux dark:text-rougebrique font-semibold text-sm hover:gap-4 transition-all duration-300 rounded-lg"
+                      [attr.aria-expanded]="exp.isExpanded"
+                      aria-label="{{ exp.isExpanded ? 'Masquer' : 'Afficher' }} les détails"
+                    >
+                      {{ exp.isExpanded ? 'Voir moins' : 'Voir plus' }}
+                      <svg
+                        class="w-5 h-5 transition-transform duration-300"
+                        [class.rotate-180]="exp.isExpanded"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-
                 <!-- Tags -->
                 @if(exp.tags && exp.tags.length > 0) {
                 <div

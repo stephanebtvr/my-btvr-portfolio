@@ -12,7 +12,7 @@ import { ContactInfo } from '../../models/portfolio.models';
       id="contact"
       class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:!bg-cyan-950 transition-all duration-500 scroll-mt-20"
     >
-      <div class="max-w-4xl mx-auto text-center">
+      <div class="max-w-4xl mx-auto text-center py-16">
         <h2 class="text-4xl font-bold text-gray-900 mb-4 dark:text-white">
           Travaillons <span class="gradient-text">Ensemble</span>
         </h2>
