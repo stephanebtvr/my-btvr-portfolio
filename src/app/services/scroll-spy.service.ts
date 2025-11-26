@@ -62,23 +62,6 @@ export class ScrollSpyService {
   /**
    * Scroll vers une section
    */
-  //   scrollToSection(sectionId: string): void {
-  //     const element = document.getElementById(sectionId);
-  //     if (element) {
-  //       const headerOffset = 80;
-  //       const elementPosition = element.getBoundingClientRect().top;
-  //       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-  //       window.scrollTo({
-  //         top: offsetPosition,
-  //         behavior: 'smooth',
-  //       });
-
-  //       // Met à jour immédiatement la section active
-  //       this.activeSection.set(sectionId);
-  //     }
-  //   }
-
   scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
     if (section) {
