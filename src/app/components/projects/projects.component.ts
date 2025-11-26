@@ -11,7 +11,7 @@ import { Project } from '../../models/portfolio.models';
   template: `
     <section
       id="projets"
-      class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:!bg-gray-900 transition-all duration-500 scroll-mt-20"
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:!bg-gray-900 transition-all duration-500 scroll-mt-20 min-h-screen"
     >
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
