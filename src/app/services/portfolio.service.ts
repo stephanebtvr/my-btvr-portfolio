@@ -231,7 +231,7 @@ export class PortfolioService {
       {
         title: 'Portfolio',
         shortDescription: 'Mon portfolio personnel développé avec Angular 18+ et Tailwind CSS.',
-        fullDescription: `...`,
+        fullDescription: ``,
         image: 'assets/projects/images/portfolio_vitrine.png',
         tags: ['Angular', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
         status: 'en cours',
