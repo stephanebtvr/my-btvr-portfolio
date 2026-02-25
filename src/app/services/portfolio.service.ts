@@ -22,6 +22,7 @@ export class PortfolioService {
         skills: [
           { name: 'Angular 15+', icon: 'devicon-angular-plain', hoverColor: '#dd0031' },
           { name: 'React', icon: 'fa-brands fa-react fa-lg', hoverColor: '#61dafb' },
+          { name: 'Vue 3', icon: 'devicon-vuejs-plain', hoverColor: '#42b883' },
           { name: 'JavaScript', icon: 'devicon-javascript-plain', hoverColor: '#f7df1e' },
           { name: 'TypeScript', icon: 'devicon-typescript-plain', hoverColor: '#3178c6' },
           { name: 'HTML5', icon: 'devicon-html5-plain', hoverColor: '#e34f26' },
@@ -40,6 +41,8 @@ export class PortfolioService {
           { name: 'Express', icon: 'devicon-express-original', hoverColor: '#000000' },
           { name: 'Spring Boot', icon: 'devicon-spring-original', hoverColor: '#6db33f' },
           { name: 'NestJS', icon: 'devicon-nestjs-original', hoverColor: '#e0234e' },
+          { name: 'Python', icon: 'devicon-python-plain', hoverColor: '#3776ab' },
+          { name: 'Flask', icon: 'devicon-flask-original', hoverColor: '#000000' },
         ],
       },
       {
@@ -142,6 +145,20 @@ export class PortfolioService {
 
   getExperiences(): Experience[] {
     return [
+      {
+        title: 'Développeur Full Stack',
+        company: 'RANDSTAD (via Randstad Digital)',
+        period: 'Aug 2025 - Jan 2026',
+        location: 'Bordeaux(33)',
+        description: [
+          "Conception et développement d'un outil interne automatisant la création de Dossiers de Compétences au format Randstad à partir de CVs hétérogènes (PDF, DOC, TXT).",
+          "Intégration de l'API Gemini pour l'extraction intelligente des données non structurées et la génération optimisée des dossiers finaux aux formats PDF et DOCX.",
+          "Développement d'un moteur d'analyse sémantique permettant d'évaluer l'adéquation entre un profil et un appel d'offres, incluant le calcul d'un score de matching.",
+          "Conteneurisation de l'application avec Docker, mise en place de tests End-to-End via Playwright et participation active aux rituels Agile Scrum.",
+        ],
+        tags: ['Python', 'Flask', 'React 18', 'Agile Scrum', 'Api Gemini', 'Docker', 'Playwright'],
+        isExpanded: false,
+      },
       {
         title: 'Développeur Java Full Stack',
         company: 'AGIRC-ARRCO (via Randstad Digital)',
