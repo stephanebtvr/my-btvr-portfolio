@@ -232,7 +232,7 @@ export class PortfolioService {
         title: 'Portfolio',
         shortDescription: 'Mon portfolio personnel développé avec Angular 18+ et Tailwind CSS.',
         fullDescription: ``,
-        image: 'assets/projects/images/portfolio_vitrine.png',
+        image: 'assets/projects/images/portfolio/portfolio_vitrine.png',
         tags: ['Angular', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
         status: 'en cours',
         links: {
@@ -241,7 +241,27 @@ export class PortfolioService {
         },
         isExpanded: false,
       },
+      {
+        title: 'Gestionnaire de Tâches Pro (Kanban)',
+        shortDescription:
+          'Application Kanban performante développée en Vue 3 avec une Architecture Clean, Drag & Drop natif et persistance des données en Local Storage.',
+        fullDescription: `Conçu pour démontrer une maîtrise avancée de l'écosystème Front-End moderne, ce projet respecte une séparation stricte des responsabilités (Feature-Sliced Design). 
 
+Points techniques clés :
+• Développé avec Vue 3 (Composition API) et typé strictement avec TypeScript.
+• Gestion d'état centralisée via Pinia avec implémentation de Watchers pour la persistance automatique dans le LocalStorage.
+• Interface moderne, 100% responsive, stylisée avec Tailwind CSS v4 (incluant un Dark Mode dynamique complet).
+• Implémentation complète de l'API HTML5 Drag & Drop pour le déplacement fluide des cartes entre les colonnes.
+• Assurance qualité rigoureuse : logique métier et composants UI testés avec Vitest et Vue Test Utils (couverture de code > 80%).`,
+        image: 'assets/projects/images/task-manager/kanban_preview.png',
+        tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Pinia', 'Vitest', 'Clean Architecture'],
+        status: 'terminé',
+        links: {
+          github: 'https://github.com/stephanebtvr/ZenTask-Manager',
+          live: 'https://zen-task-manager-seven.vercel.app/tasks',
+        },
+        isExpanded: false,
+      },
       // ... autres projets
     ];
   }
