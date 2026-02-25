@@ -270,12 +270,12 @@ Points techniques clés :
 • Interface moderne, 100% responsive, stylisée avec Tailwind CSS v4 (incluant un Dark Mode dynamique complet).
 • Implémentation complète de l'API HTML5 Drag & Drop pour le déplacement fluide des cartes entre les colonnes.
 • Assurance qualité rigoureuse : logique métier et composants UI testés avec Vitest et Vue Test Utils (couverture de code > 80%).`,
-        image: 'assets/projects/images/task-manager/kanban_preview.png',
+        image: 'assets/projects/images/task-manager/task-manager-home.png',
         tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Pinia', 'Vitest', 'Clean Architecture'],
         status: 'terminé',
         links: {
           github: 'https://github.com/stephanebtvr/ZenTask-Manager',
-          live: 'https://zen-task-manager-seven.vercel.app/tasks',
+          live: 'https://zen-task-manager-seven.vercel.app/',
         },
         isExpanded: false,
       },
