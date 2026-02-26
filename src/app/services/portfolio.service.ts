@@ -260,7 +260,7 @@ export class PortfolioService {
         isExpanded: false,
       },
       {
-        title: 'Gestionnaire de Tâches Pro (Kanban)',
+        title: 'Gestionnaire de Tâches Kanban',
         shortDescription:
           'Application Kanban performante développée en Vue 3 avec une Architecture Clean, Drag & Drop natif et persistance des données en Local Storage.',
         fullDescription: `Conçu pour démontrer une maîtrise avancée de l'écosystème Front-End moderne, ce projet respecte une séparation stricte des responsabilités (Feature-Sliced Design). 
