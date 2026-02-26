@@ -29,6 +29,7 @@ export class PortfolioService {
           { name: 'CSS3', icon: 'devicon-css3-plain', hoverColor: '#1572b6' },
           { name: 'SASS', icon: 'devicon-sass-plain', hoverColor: '#cc6699' },
           { name: 'Bootstrap', icon: 'devicon-bootstrap-plain', hoverColor: '#7952b3' },
+          { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-plain', hoverColor: '#38bdf8' },
         ],
       },
       {
