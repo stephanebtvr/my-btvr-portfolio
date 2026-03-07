@@ -302,7 +302,6 @@ Points techniques clés :
           'Vitest',
           'Clean Architecture',
           'Chart.js',
-          'Local Storage',
           'Playwright',
         ],
         status: 'en cours',
