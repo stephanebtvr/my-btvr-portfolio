@@ -308,7 +308,7 @@ Points techniques clés :
         status: 'en cours',
         links: {
           github: 'https://github.com/stephanebtvr/trs-lean-vue3',
-          live: 'https://trs-lean-vue3-1rxr.vercel.app/',
+          live: 'https://trs-lean-vue3.vercel.app/',
         },
         isExpanded: false,
       },
