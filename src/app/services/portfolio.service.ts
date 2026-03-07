@@ -299,10 +299,9 @@ Points techniques clés :
           'TypeScript',
           'Tailwind CSS',
           'Pinia',
-          'Vitest',
+          'Vitest / Playwright',
           'Clean Architecture',
           'Chart.js',
-          'Playwright',
         ],
         status: 'en cours',
         links: {
