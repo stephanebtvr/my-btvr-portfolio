@@ -212,7 +212,7 @@ export class PortfolioService {
         location: 'Cestas (33)',
         description: [
           "Pilotage de projets DMAIC générant ~200k€ d'économies annuelles sur les lignes Mikado/Petit Écolier",
-          "Aniumation d'ateliers Kaizen et 5S pour améliorer l'efficacité opérationnelle",
+          "Animation d'ateliers Kaizen et 5S pour améliorer l'efficacité opérationnelle",
           "Coaching et montée en compétences d'une équipe de 35 opérationnels",
           'Animation des performances et suivi des indicateurs SQCDM',
         ],
