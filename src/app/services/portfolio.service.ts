@@ -263,14 +263,14 @@ export class PortfolioService {
         title: 'Gestionnaire de Tâches Kanban',
         shortDescription:
           'Application Kanban performante développée en Vue 3 avec une Architecture Clean, Drag & Drop natif et persistance des données en Local Storage.',
-        fullDescription: `Conçu pour démontrer une maîtrise avancée de l'écosystème Front-End moderne, ce projet respecte une séparation stricte des responsabilités (Feature-Sliced Design). 
+        fullDescription: `Conçu pour démontrer une maîtrise avancée de l'écosystème Front-End moderne, ce projet respecte une séparation stricte des responsabilités (Feature-Sliced Design).`,
 
-Points techniques clés :
-• Développé avec Vue 3 (Composition API) et typé strictement avec TypeScript.
-• Gestion d'état centralisée via Pinia avec implémentation de Watchers pour la persistance automatique dans le LocalStorage.
-• Interface moderne, 100% responsive, stylisée avec Tailwind CSS v4 (incluant un Dark Mode dynamique complet).
-• Implémentation complète de l'API HTML5 Drag & Drop pour le déplacement fluide des cartes entre les colonnes.
-• Assurance qualité rigoureuse : logique métier et composants UI testés avec Vitest et Vue Test Utils (couverture de code > 80%).`,
+        // Points techniques clés :
+        // • Développé avec Vue 3 (Composition API) et typé strictement avec TypeScript.
+        // • Gestion d'état centralisée via Pinia avec implémentation de Watchers pour la persistance automatique dans le LocalStorage.
+        // • Interface moderne, 100% responsive, stylisée avec Tailwind CSS v4 (incluant un Dark Mode dynamique complet).
+        // • Implémentation complète de l'API HTML5 Drag & Drop pour le déplacement fluide des cartes entre les colonnes.
+        // • Assurance qualité rigoureuse : logique métier et composants UI testés avec Vitest et Vue Test Utils (couverture de code > 80%).`
         image: 'assets/projects/images/task-manager/task-manager-home.png',
         tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Pinia', 'Vitest', 'Clean Architecture'],
         status: 'terminé',
@@ -284,15 +284,14 @@ Points techniques clés :
         title: 'Gestionnaire de TRS Industriel',
         shortDescription:
           'Application de gestion des TRS (Tâches de Réalisation Spécifique) dans un environnement industriel.',
-        fullDescription: ` Conçu pour répondre aux besoins spécifiques de suivi et d’analyse des performances industrielles, ce projet met en œuvre une architecture logicielle robuste et une interface utilisateur intuitive.
-        Points techniques clés :
-        • Développé avec Vue 3 (Composition API) et typé strictement avec TypeScript pour une maintenabilité optimale.
-        • Interface moderne et responsive, stylisée avec Tailwind CSS v4, incluant un Dark Mode dynamique complet.
-        • Gestion d’état centralisée via Pinia, avec implémentation de Watchers pour la persistance automatique des données dans le LocalStorage.
-        • Visualisation avancée des données de performance à l’aide de Chart.js, permettant une analyse approfondie des TRS.
-        • Assurance qualité rigoureuse : logique métier et composants UI testés avec Vitest et Vue Test Utils (couverture de code > 80%).
-        • Tests End-to-End complets avec Playwright pour garantir une expérience utilisateur fluide et sans bugs.`,
-
+        fullDescription: ` Conçu pour répondre aux besoins spécifiques de suivi et d’analyse des performances industrielles, ce projet met en œuvre une architecture logicielle robuste et une interface utilisateur intuitive.`,
+        // // Points techniques clés :
+        //         • Développé avec Vue 3 (Composition API) et typé strictement avec TypeScript pour une maintenabilité optimale.
+        //         • Interface moderne et responsive, stylisée avec Tailwind CSS v4, incluant un Dark Mode dynamique complet.
+        //         • Gestion d’état centralisée via Pinia, avec implémentation de Watchers pour la persistance automatique des données dans le LocalStorage.
+        //         • Visualisation avancée des données de performance à l’aide de Chart.js, permettant une analyse approfondie des TRS.
+        //         • Assurance qualité rigoureuse : logique métier et composants UI testés avec Vitest et Vue Test Utils (couverture de code > 80%).
+        //         • Tests End-to-End complets avec Playwright pour garantir une expérience utilisateur fluide et sans bugs.`,
         image: 'assets/projects/images/trs-manager/trs-manager-dashboard.png',
         tags: [
           'Vue 3',
