@@ -280,6 +280,38 @@ Points techniques clés :
         },
         isExpanded: false,
       },
+      {
+        title: 'Gestionnaire de TRS Industriel',
+        shortDescription:
+          'Application de gestion des TRS (Tâches de Réalisation Spécifique) dans un environnement industriel.',
+        fullDescription: ` Conçu pour répondre aux besoins spécifiques de suivi et d’analyse des performances industrielles, ce projet met en œuvre une architecture logicielle robuste et une interface utilisateur intuitive.
+        Points techniques clés :
+        • Développé avec Vue 3 (Composition API) et typé strictement avec TypeScript pour une maintenabilité optimale.
+        • Interface moderne et responsive, stylisée avec Tailwind CSS v4, incluant un Dark Mode dynamique complet.
+        • Gestion d’état centralisée via Pinia, avec implémentation de Watchers pour la persistance automatique des données dans le LocalStorage.
+        • Visualisation avancée des données de performance à l’aide de Chart.js, permettant une analyse approfondie des TRS.
+        • Assurance qualité rigoureuse : logique métier et composants UI testés avec Vitest et Vue Test Utils (couverture de code > 80%).
+        • Tests End-to-End complets avec Playwright pour garantir une expérience utilisateur fluide et sans bugs.`,
+
+        image: 'assets/projects/images/trs-manager/trs-manager-dashboard.png',
+        tags: [
+          'Vue 3',
+          'TypeScript',
+          'Tailwind CSS',
+          'Pinia',
+          'Vitest',
+          'Clean Architecture',
+          'Chart.js',
+          'Local Storage',
+          'Playwright',
+        ],
+        status: 'en cours',
+        links: {
+          github: 'https://github.com/stephanebtvr/trs-lean-vue3',
+          live: 'https://trs-lean-vue3-1rxr.vercel.app/',
+        },
+        isExpanded: false,
+      },
       // ... autres projets
     ];
   }
